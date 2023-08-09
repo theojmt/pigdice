@@ -53,7 +53,22 @@ body {
   justify-content: center;
 }
 
+.playertwo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .player1 {
+  position: absolute;
+  top: 150px;
+  font-size: 55px;
+  color: rgb(69, 69, 69);
+  letter-spacing: 6px;
+}
+
+.player2 {
   position: absolute;
   top: 150px;
   font-size: 55px;
@@ -88,7 +103,24 @@ body {
   justify-content: center;
 }
 
+.current2 {
+  background-color: rgb(106, 23, 23);
+  width: 220px;
+  height: 150px;
+  position: relative;
+  top: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .currenttitle1 {
+  font-weight: bold;
+  position: absolute;
+  top: 1px;
+}
+
+.currenttitle2 {
   font-weight: bold;
   position: absolute;
   top: 1px;
@@ -99,7 +131,12 @@ body {
   font-size: 75px;
 }
 
-.rond1 {
+.score2 {
+  color: white;
+  font-size: 75px;
+}
+
+.rond {
   position: absolute;
   left: 650px;
   top: 230px;
