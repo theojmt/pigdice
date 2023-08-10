@@ -161,3 +161,27 @@ body {
   font-size: 25px;
   letter-spacing: 1px;
 }
+
+.hold {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.buttonhold {
+  width: 220px;
+  height: 100px;
+  margin-bottom: 170px;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.iconhold {
+  opacity: 70%;
+}
