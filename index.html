@@ -6,40 +6,29 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Pig Dice</title>
 </head>
 <body>
   <div class="container">
+    
+    <button class="newgame" id="newgame"><i class="fa-solid fa-circle-plus" style="color: #ef6a4b;"></i> NEW GAME</button>
 
-    <div class="newgame">
-      <div id="buttonicon" class="buttonicon">
-          <img
-          src="img\plus.png" 
-          alt="Image + de début de partie"
-          width="45px"
-          height="45px"
-          >
-          <p>NEW GAME</p>
-      </div>
-    </div>
+    <button class="rolldice" id="rolldice"><i class="fa-solid fa-rotate" style="color: #ee6c51;"></i> ROLL DICE</button>
+
+    <button class="hold" id="hold"><i class="fa-solid fa-download" style="color: #ec6b51;"></i> HOLD</button>
+    
+    <i class="fa-solid fa-circle rond"></i>
 
     <div id="left" class="left">
       <div class="playerone" id="playerone">
         <p class="player1">PLAYER 1</p>
-        <img 
-        src="img/rond.png" 
-        alt="Point pour préciser qui doit jouer"
-        width="25px"
-        height="25px"
-        class="rond"
-        >
-        <p class="global1">43</p>
+        <p class="global1" id="global1">43</p>
         
         <div class="containerscore">
           <div class="current1" id="current1">
             <p class="currenttitle1">CURRENT</p>
-            <p class="score1">11</p>
+            <p class="score1" id="score1">11</p>
           </div>
         </div>
 
@@ -49,44 +38,27 @@
     <div id="right" class="right">
       <div class="playertwo" id="playertwo">
         <p class="player2">PLAYER 2</p>
-        <p class="global1">72</p>
+        <p class="global2" id="global2">72</p>
 
         <div class="containerscore">
           <div class="current2" id="current2">
             <p class="currenttitle2">CURRENT</p>
-            <p class="score2">0</p>
+            <p class="score2" id="score2">0</p>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div class="rolldice" id="rolldice">
-      <div class="buttonroll" id="buttonroll">
-        <img
-          src="img/fleche.png" 
-          alt="Relancer les dès"
-          width="45px"
-          height="45px"
-        >
-        <p>ROLL DICE</p>
-      </div>
-    </div>
-
-    <div class="hold" id="hold">
-      <div class="buttonhold" id="buttonhold">
-        <img
-          src="img/hold.png" 
-          alt="Relancer les dès"
-          width="45px"
-          height="45px"
-          class="iconhold"
-        >
-        <p>HOLD</p>
-      </div>
-
+    <div id="dice" class="dice">
+      <img 
+      src="img/dice5.png" 
+      alt="Jeu de dès"
+      >
     </div>
     
   </div>
+
+<script src="script.js"></script>
 </body>
 </html>

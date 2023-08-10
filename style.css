@@ -64,6 +64,13 @@ body {
   color: rgb(235, 156, 11);
 }
 
+.global2 {
+  position: absolute;
+  top: 180px;
+  font-size: 120px;
+  color: rgb(235, 156, 11);
+}
+
 .containerscore {
   width: 100%;
   height: 100%;
@@ -74,7 +81,7 @@ body {
 }
 
 .current1 {
-  background-color: rgb(106, 23, 23);
+  background-color: #FF724C;
   width: 220px;
   height: 150px;
   position: relative;
@@ -85,7 +92,7 @@ body {
 }
 
 .current2 {
-  background-color: rgb(106, 23, 23);
+  background-color: #FF724C;
   width: 220px;
   height: 150px;
   position: relative;
@@ -121,67 +128,62 @@ body {
   position: absolute;
   left: 650px;
   top: 230px;
+  color: #ee6b50
 }
 
-.newgame{
-  position: absolute;
+.dice {
   width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  color: rgb(79, 79, 79);
-}
-
-.buttonicon {
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 220px;
-  font-size: 25px;
-  letter-spacing: 1px;
+  justify-content: center;
+  position: absolute;
+  bottom: 100px;
+}
+
+.dice > img {
+  width: 150px;
+  height: 150px;
+}
+
+/*              BOUTONS              */
+
+.newgame {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 .rolldice {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.buttonroll {
-  width: 220px;
-  height: 100px;
-  margin-bottom: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 25px;
-  letter-spacing: 1px;
+  left: 50%;
+  bottom: 32%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 .hold {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  left: 50%;
+  bottom: 22%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.buttonhold {
-  width: 220px;
-  height: 100px;
-  margin-bottom: 170px;
-  display: flex;
-  align-items: center;
-  justify-content:space-evenly;
-  font-size: 25px;
-  letter-spacing: 1px;
+button {
+  font-size: 30px;
+  border: none;
+  background: none;
+  color: rgb(69, 69, 69);
 }
 
-.iconhold {
-  opacity: 70%;
+button:hover {
+  font-size: 32px;
+  color: black;
+}
+
+button:active {
+  font-size: 31px;
 }
