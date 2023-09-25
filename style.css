@@ -18,13 +18,15 @@ body {
 .left {
   height: 100%;
   width: 50%;
-  background-color: rgb(238, 238, 238);
+  background-color: white;
+  transition: 0.2s ease-out;
 }
 
 .right {
   background-color: white;
   height: 100%;
   width: 50%;
+  transition: 0.2s ease-out;
 }
 
 .playerone {
@@ -128,7 +130,8 @@ body {
   position: absolute;
   left: 650px;
   top: 230px;
-  color: #ee6b50
+  color: #ee6b50;
+  transition: 0.1s ease-out;
 }
 
 .dice {
