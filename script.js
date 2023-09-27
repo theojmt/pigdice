@@ -2,7 +2,6 @@ let right = document.getElementById("right");
 let left = document.getElementById("left");
 let rond = document.getElementById("rond");
 
-
 function player1() {
   left.style.backgroundColor = "rgb(238, 238, 238)";
   right.style.backgroundColor = "white";
@@ -41,7 +40,6 @@ document.getElementById("newgame").addEventListener("click", function() {
 
 document.getElementById("rolldice").addEventListener("click", function() {
   document.getElementById("dice");
-  
   let counter;
   let dicenumber = Math.floor(Math.random() * 6);
   
