@@ -1,6 +1,7 @@
 let right = document.getElementById("right");
 let left = document.getElementById("left");
 let rond = document.getElementById("rond");
+let block = document.getElementById("block")
 
 function player1() {
   left.style.backgroundColor = "rgb(238, 238, 238)";
@@ -34,6 +35,8 @@ document.getElementById("newgame").addEventListener("click", function() {
   let global2 = document.getElementById("global2").innerHTML = 0;
   let score1 = document.getElementById("score1").innerHTML = 0;
   let score2 = document.getElementById("score2").innerHTML = 0;
+  block.style.display = "none";
+  currentPlayer = player1();
 })
 
 // ROLL DICE
@@ -47,46 +50,46 @@ document.getElementById("rolldice").addEventListener("click", function() {
     dice.innerHTML = '<img src="img/dice1.png">';
     changePlayer();
     if (currentPlayer === player1) {
-      alert("C'est le tour du joueur 1 !")
+      alert("C'est au tour du joueur 1 !")
       score2.innerHTML = 0;
     } else if (currentPlayer === player2) {
-      alert("C'est le tour du joueur 2 !")
+      alert("C'est au tour du joueur 2 !")
       score1.innerHTML = 0;
     }
   } else if (dicenumber == 1) {
     dice.innerHTML = '<img src="img/dice2.png">';
     if (currentPlayer === player1) {
-      score1.innerHTML = Number(score1.innerHTML) + Number(2);
+      score1.innerHTML = Number(score1.innerHTML) + 2;
     } else if (currentPlayer === player2) {
-      score2.innerHTML = Number(score2.innerHTML) + Number(2);
+      score2.innerHTML = Number(score2.innerHTML) + 2;
     }
   } else if (dicenumber == 2) {
     dice.innerHTML = '<img src="img/dice3.png">';
     if (currentPlayer === player1) {
-      score1.innerHTML = Number(score1.innerHTML) + Number(3);
+      score1.innerHTML = Number(score1.innerHTML) + 3;
     } else if (currentPlayer === player2) {
-      score2.innerHTML = Number(score2.innerHTML) + Number(3);
+      score2.innerHTML = Number(score2.innerHTML) + 3;
     }
   } else if (dicenumber == 3) {
     dice.innerHTML = '<img src="img/dice4.png">';
     if (currentPlayer === player1) {
-      score1.innerHTML = Number(score1.innerHTML) + Number(4);
+      score1.innerHTML = Number(score1.innerHTML) + 4;
     } else if (currentPlayer === player2) {
-      score2.innerHTML = Number(score2.innerHTML) + Number(4);
+      score2.innerHTML = Number(score2.innerHTML) + 4;
     }
   } else if (dicenumber == 4) {
     dice.innerHTML = '<img src="img/dice5.png">';
     if (currentPlayer === player1) {
-      score1.innerHTML = Number(score1.innerHTML) + Number(5);
+      score1.innerHTML = Number(score1.innerHTML) + 5;
     } else if (currentPlayer === player2) {
-      score2.innerHTML = Number(score2.innerHTML) + Number(5);
+      score2.innerHTML = Number(score2.innerHTML) + 5;
     }
   } else if (dicenumber == 5) {
     dice.innerHTML = '<img src="img/dice6.png">';
     if (currentPlayer === player1) {
-      score1.innerHTML = Number(score1.innerHTML) + Number(6);
+      score1.innerHTML = Number(score1.innerHTML) + 6;
     } else if (currentPlayer === player2) {
-      score2.innerHTML = Number(score2.innerHTML) + Number(6);
+      score2.innerHTML = Number(score2.innerHTML) + 6;
     }
   };
 
@@ -99,9 +102,19 @@ document.getElementById("hold").addEventListener("click", function() {
   if (currentPlayer === player1) {
     global2.innerHTML = Number(global2.innerHTML) + Number(score2.innerHTML);
     score2.innerHTML = 0;
+    if (global2.innerHTML >= 100) {
+      alert("Le joueur 2 a gagné !")
+      global2.innerHTML = 100;
+      block.style.display = "block";
+    }
   } else if (currentPlayer === player2) {
     global1.innerHTML = Number(global1.innerHTML) + Number(score1.innerHTML);
     score1.innerHTML = 0;
+    if (global1.innerHTML >= 100) {
+      alert("Le joueur 1 a gagné !")
+      global1.innerHTML = 100;
+      block.style.display = "block";
+    }
   }
 })
 
