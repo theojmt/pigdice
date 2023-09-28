@@ -160,6 +160,7 @@ body {
 }
 
 .rolldice {
+  color: red;
   position: absolute;
   left: 50%;
   bottom: 32%;
@@ -168,6 +169,7 @@ body {
 }
 
 .hold {
+  color: red;
   position: absolute;
   left: 50%;
   bottom: 22%;

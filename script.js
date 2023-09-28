@@ -2,6 +2,8 @@ let right = document.getElementById("right");
 let left = document.getElementById("left");
 let rond = document.getElementById("rond");
 let block = document.getElementById("block")
+let rolldice = document.getElementById("rolldice");
+let hold = document.getElementById("hold");
 
 function player1() {
   left.style.backgroundColor = "rgb(238, 238, 238)";
@@ -36,12 +38,13 @@ document.getElementById("newgame").addEventListener("click", function() {
   let score1 = document.getElementById("score1").innerHTML = 0;
   let score2 = document.getElementById("score2").innerHTML = 0;
   block.style.display = "none";
-  currentPlayer = player1();
-})
+  rolldice.style.color = "rgb(69, 69, 69)";
+  hold.style.color = "rgb(69, 69, 69)";
+});
 
 // ROLL DICE
 
-document.getElementById("rolldice").addEventListener("click", function() {
+rolldice.addEventListener("click", function() {
   document.getElementById("dice");
   let counter;
   let dicenumber = Math.floor(Math.random() * 6);
@@ -97,7 +100,7 @@ document.getElementById("rolldice").addEventListener("click", function() {
 
 // HOLD
 
-document.getElementById("hold").addEventListener("click", function() {
+hold.addEventListener("click", function() {
   changePlayer()
   if (currentPlayer === player1) {
     global2.innerHTML = Number(global2.innerHTML) + Number(score2.innerHTML);
@@ -106,6 +109,8 @@ document.getElementById("hold").addEventListener("click", function() {
       alert("Le joueur 2 a gagné !")
       global2.innerHTML = 100;
       block.style.display = "block";
+      rolldice.style.color = "red";
+      hold.style.color = "red";
     }
   } else if (currentPlayer === player2) {
     global1.innerHTML = Number(global1.innerHTML) + Number(score1.innerHTML);
@@ -114,6 +119,8 @@ document.getElementById("hold").addEventListener("click", function() {
       alert("Le joueur 1 a gagné !")
       global1.innerHTML = 100;
       block.style.display = "block";
+      rolldice.style.color = "red";
+      hold.style.color = "red";
     }
   }
 })
